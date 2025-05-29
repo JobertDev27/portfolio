@@ -1,0 +1,116 @@
+:root {
+  --bg: #0c1b1d;
+  --grid: #060d0e;
+  --accent: #04a777;
+  --text: #ffefc2;
+  --overlay: #1e4348;
+}
+
+* {
+  font-family: "Barlow Condensed";
+  margin: 0;
+  color: var(--text);
+}
+
+body {
+  background-color: var(--bg);
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  pointer-events: none;
+}
+
+button,
+a {
+  pointer-events: auto;
+}
+
+section {
+  width: fit-content;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+.highlight-text {
+  color: var(--accent);
+}
+
+.bg-grid {
+  display: grid;
+  grid-template-columns: repeat(20, 100px);
+  grid-template-rows: repeat(10, 100px);
+  gap: 5px;
+  width: calc(20 * 100px + 19 * 5px); /* 2095px */
+  height: calc(10 * 100px + 9 * 5px); /* 1045px */
+  overflow: hidden;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.bg-tile {
+  width: 100px;
+  height: 100px;
+  background-color: var(--grid);
+  transition: background-color 1000ms ease-out;
+}
+
+.bg-tile.active {
+  background-color: #00ffb3;
+  transition: background-color 350ms ease-out;
+}
+
+.personnal-info {
+  margin-top: 100px;
+}
+
+.info-cont,
+.title,
+.location {
+  display: flex;
+  gap: 5px;
+}
+
+.info-cont {
+  gap: 10px;
+}
+
+.title {
+  border-right: 1px solid var(--text);
+  padding-right: 10px;
+}
+
+.location {
+  padding-left: 10px;
+}
+
+.download-btn {
+  position: relative;
+}
+
+.btn {
+  color: var(--grid);
+  font-size: 1.2rem;
+  padding: 5px 15px;
+  padding-left: 38px;
+  border-radius: 25px;
+  border: 0;
+  background-color: var(--text);
+  cursor: pointer;
+}
+
+.download-svg {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+}
+
+.socials {
+  width: 100%;
+}
