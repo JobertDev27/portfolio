@@ -28,7 +28,7 @@ export default function App() {
               className="btn"
               onClick={() => {
                 const link = document.createElement("a");
-                link.href = "../public/jobert-poylan-resume.pdf";
+                link.href = "/jobert-poylan-resume.pdf";
                 link.download = "jobert-poylan-resume.pdf";
                 document.body.appendChild(link);
                 link.click();
