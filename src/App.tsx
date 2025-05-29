@@ -37,9 +37,6 @@ export default function App() {
             >
               Resume
             </button>
-            <a href="/jobert-poylan-resume.pdf" download>
-              try download link
-            </a>
           </div>
         </section>
       </main>
