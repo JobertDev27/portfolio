@@ -14,6 +14,8 @@
 
 body {
   background-color: var(--bg);
+  display: flex;
+  justify-content: center;
 }
 
 main {
@@ -21,6 +23,12 @@ main {
   align-items: center;
   flex-direction: column;
   pointer-events: none;
+  width: fit-content;
+  background-color: rgba(128, 128, 128, 0.075);
+  margin-top: 100px;
+  padding: 40px;
+  backdrop-filter: blur(2px);
+  border-radius: 20px;
 }
 
 button,
@@ -62,12 +70,8 @@ h1 {
 }
 
 .bg-tile.active {
-  background-color: #00ffb3;
+  background-color: var(--accent);
   transition: background-color 350ms ease-out;
-}
-
-.personnal-info {
-  margin-top: 100px;
 }
 
 .info-cont,
