@@ -4,3 +4,7 @@ export type Props = {
     className?: string
 }
 
+export type SocialsLinkProps = {
+  site: string;
+  children: React.ReactNode;
+};

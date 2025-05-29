@@ -2,8 +2,21 @@ import Bg from "./components/Bg";
 import Code from "./components/svg/Code";
 import Location from "./components/svg/Location";
 import Download from "./components/svg/Download";
+import Github from "./components/svg/Github";
+import type { SocialsLinkProps } from "./components/type";
 
 export default function App() {
+  const SocialsLink = ({ site, children }: SocialsLinkProps) => {
+    return (
+      <button
+        className="social-btn"
+        onClick={() => window.open(site, "_blank", "noopener,noreferrer")}
+      >
+        {children}
+      </button>
+    );
+  };
+
   return (
     <>
       <Bg />
@@ -38,6 +51,9 @@ export default function App() {
               Resume
             </button>
           </div>
+          <SocialsLink site="https://github.com/JobertDev27">
+            <Github width="32px" height="32px" />
+          </SocialsLink>
         </section>
       </main>
     </>
