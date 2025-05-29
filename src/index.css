@@ -27,7 +27,7 @@ main {
   background-color: rgba(128, 128, 128, 0.075);
   margin-top: 100px;
   padding: 40px;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(2095px);
   border-radius: 20px;
 }
 
