@@ -4,34 +4,23 @@ import { useEffect, useRef, useState } from "react";
 export default function Bg() {
   const tileCount = 200;
   const containerRef = useRef<HTMLDivElement>(null);
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [activeIndices, setActiveIndices] = useState<number[]>([]);
 
   useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
+    const handlePointer = (x: number, y: number) => {
       const tileSize = 100;
       const gapSize = 5;
       const columns = 20;
       const rows = 10;
 
-      // Stores the location of the mouse so i can track its position
-      const x = e.clientX;
-      const y = e.clientY;
-
-      // the size of the tile + gap so i can check its position
       const tilePlusGapX = tileSize + gapSize;
       const tilePlusGapY = tileSize + gapSize;
 
-      // Check if mouse is inside gap space horizontally or vertically
       const xInTile = x % tilePlusGapX;
       const yInTile = y % tilePlusGapY;
 
-      // Check if mouse is outside of the tile
-      if (xInTile > tileSize || yInTile > tileSize) {
-        setActiveIndex(null);
-        return;
-      }
+      if (xInTile > tileSize || yInTile > tileSize) return;
 
-      // Returns the tile in which the mouse is in
       let col = Math.floor(x / tilePlusGapX);
       let row = Math.floor(y / tilePlusGapY);
 
@@ -39,11 +28,35 @@ export default function Bg() {
       row = Math.min(row, rows - 1);
 
       const index = row * columns + col;
-      setActiveIndex(index);
+
+      setActiveIndices((prev) => {
+        if (prev.includes(index)) return prev;
+        return [...prev, index];
+      });
+
+      setTimeout(() => {
+        setActiveIndices((prev) => prev.filter((i) => i !== index));
+      }, 1000);
+    };
+
+    const handleMouseMove = (e: MouseEvent) => {
+      handlePointer(e.clientX, e.clientY);
+    };
+
+    const handleTouchMove = (e: TouchEvent) => {
+      if (e.touches.length > 0) {
+        const touch = e.touches[0];
+        handlePointer(touch.clientX, touch.clientY);
+      }
     };
 
     window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
+    window.addEventListener("touchmove", handleTouchMove);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("touchmove", handleTouchMove);
+    };
   }, []);
 
   return (
@@ -51,7 +64,7 @@ export default function Bg() {
       {Array.from({ length: tileCount }).map((_, i) => (
         <div
           key={i}
-          className={`bg-tile ${i === activeIndex ? "active" : ""}`}
+          className={`bg-tile ${activeIndices.includes(i) ? "active" : ""}`}
         ></div>
       ))}
     </div>
