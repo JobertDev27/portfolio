@@ -1,8 +1,5 @@
 import Bg from "./components/Bg";
-import Code from "./components/svg/Code";
-import Location from "./components/svg/Location";
-import Download from "./components/svg/Download";
-import Github from "./components/svg/Github";
+import { Code, Location, Download, Github } from "./components/Svg";
 import type { SocialsLinkProps } from "./components/type";
 
 export default function App() {

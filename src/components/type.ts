@@ -1,4 +1,4 @@
-export type Props = {
+export type SvgProps = {
     width: string,
     height: string
     className?: string
