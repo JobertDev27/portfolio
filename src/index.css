@@ -27,7 +27,7 @@ main {
   background-color: rgba(128, 128, 128, 0.075);
   margin-top: 100px;
   padding: 40px;
-  backdrop-filter: blur(2095px);
+  backdrop-filter: blur(100%);
   border-radius: 20px;
   min-width: 300px;
   max-width: 620px;
@@ -191,6 +191,10 @@ h2 {
 
   .title {
     border: 0;
+  }
+
+  .skill-box {
+    padding: 10px 3px;
   }
 
   main {
