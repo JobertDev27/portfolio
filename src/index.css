@@ -29,6 +29,8 @@ main {
   padding: 40px;
   backdrop-filter: blur(2095px);
   border-radius: 20px;
+  min-width: 300px;
+  max-width: 620px;
 }
 
 button,
@@ -41,7 +43,12 @@ section {
 }
 
 h1 {
+  font-weight: 600;
   font-size: 3rem;
+}
+
+h2 {
+  font-weight: 400;
 }
 
 .highlight-text {
@@ -53,8 +60,8 @@ h1 {
   grid-template-columns: repeat(20, 100px);
   grid-template-rows: repeat(10, 100px);
   gap: 5px;
-  width: calc(20 * 100px + 19 * 5px); /* 2095px */
-  height: calc(10 * 100px + 9 * 5px); /* 1045px */
+  width: calc(20 * 100px + 19 * 5px);
+  height: calc(10 * 100px + 9 * 5px);
   overflow: hidden;
   position: fixed;
   z-index: -1;
@@ -74,6 +81,10 @@ h1 {
   transition: background-color 350ms ease-out;
 }
 
+.personnal-info {
+  width: 100%;
+}
+
 .info-cont,
 .title,
 .location {
@@ -83,6 +94,7 @@ h1 {
 
 .info-cont {
   gap: 10px;
+  margin-top: 10px;
 }
 
 .title {
@@ -119,9 +131,70 @@ h1 {
   width: 100%;
   display: flex;
   gap: 5px;
+  margin-top: 15px;
 }
 
 .social-btn {
   background-color: transparent;
   border: none;
+}
+
+.tech-stack {
+  width: 100%;
+  padding-top: 40px;
+}
+
+.skills-container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding-top: 20px;
+}
+
+.skill-box {
+  background-color: var(--overlay);
+  display: flex;
+  width: 90px;
+  gap: 5px;
+  padding: 10px 5px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (width < 481px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  .info-cont {
+    flex-direction: column;
+  }
+
+  .svg-img {
+    width: 24px;
+  }
+
+  .title,
+  .location {
+    padding: 0;
+  }
+
+  .info-cont {
+    gap: 0;
+  }
+
+  .title {
+    border: 0;
+  }
+
+  main {
+    align-items: center;
+    justify-content: center;
+  }
 }
