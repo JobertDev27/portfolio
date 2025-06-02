@@ -24,10 +24,8 @@ main {
   flex-direction: column;
   pointer-events: none;
   width: fit-content;
-  background-color: rgba(128, 128, 128, 0.075);
   margin-top: 50px;
   padding: 40px;
-  backdrop-filter: blur(1000px);
   border-radius: 20px;
   min-width: 300px;
   max-width: 620px;
@@ -67,6 +65,7 @@ h2 {
   z-index: -1;
   top: 0;
   left: 0;
+  filter: blur(100px);
 }
 
 .bg-tile {
@@ -195,10 +194,5 @@ h2 {
 
   .skill-box {
     padding: 10px 3px;
-  }
-
-  main {
-    align-items: center;
-    justify-content: center;
   }
 }
