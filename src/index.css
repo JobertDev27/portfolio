@@ -24,11 +24,11 @@ main {
   flex-direction: column;
   pointer-events: none;
   width: fit-content;
-  margin-top: 50px;
-  padding: 40px;
+  margin-top: 30px;
   border-radius: 20px;
   min-width: 300px;
   max-width: 620px;
+  padding: 10px 20px;
 }
 
 button,
@@ -37,7 +37,8 @@ a {
 }
 
 section {
-  width: fit-content;
+  width: 100%;
+  margin-top: 30px;
 }
 
 h1 {
@@ -78,10 +79,6 @@ h2 {
 .bg-tile.active {
   background-color: var(--accent);
   transition: background-color 350ms ease-out;
-}
-
-.personnal-info {
-  width: 100%;
 }
 
 .info-cont,
@@ -136,11 +133,6 @@ h2 {
 .social-btn {
   background-color: transparent;
   border: none;
-}
-
-.tech-stack {
-  width: 100%;
-  padding-top: 40px;
 }
 
 .skills-container {
