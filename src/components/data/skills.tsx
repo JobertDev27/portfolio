@@ -10,7 +10,7 @@ import {
   Postgres,
   Git,
   Figma,
-} from "./Svg";
+} from "../Svg";
 
 export const skills = [
   { name: "HTML", image: <Html width="24px" height="24px" /> },
