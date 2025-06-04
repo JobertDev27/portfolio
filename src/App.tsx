@@ -2,7 +2,7 @@ import type { SocialsLinkProps } from "./components/type";
 
 import Bg from "./components/Bg";
 import SkillBox from "./components/SkillBox";
-import { skills } from "./components/skills";
+import { skills } from "./components/data/skills";
 import {
   Code,
   Location,
@@ -11,6 +11,7 @@ import {
   Linkedin,
   Email,
 } from "./components/Svg";
+import Header from "./components/Header";
 
 export default function App() {
   const SocialsLink = ({ site, children }: SocialsLinkProps) => {
@@ -31,6 +32,7 @@ export default function App() {
 
   return (
     <>
+      <Header />
       <Bg />
       <main>
         <section aria-label="Personnal info" className="personnal-info">
@@ -82,6 +84,9 @@ export default function App() {
               );
             })}
           </div>
+        </section>
+        <section aria-label="Projects list">
+          <h2>FEATURE PROJECTS</h2>
         </section>
       </main>
     </>
