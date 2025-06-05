@@ -1,3 +1,5 @@
+import type React from "react";
+
 export type SvgProps = {
     width: string,
     height: string
@@ -12,4 +14,13 @@ export type SocialsLinkProps = {
 export type SkillProps = {
   name: string;
   image: React.ReactNode;
+}
+
+export type ProjectProps = {
+  name: string;
+  children: React.ReactNode;
+  desc: string;
+  stack: Array<string>;
+  live: string;
+  code : string 
 }
