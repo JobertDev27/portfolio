@@ -1,8 +1,17 @@
+import { Link } from "react-router";
+
 import type { SocialsLinkProps } from "./components/type";
 
 import Bg from "./components/Bg";
 import SkillBox from "./components/SkillBox";
+import Header from "./components/Header";
+import ProjectContainer from "./components/ProjectContainer";
+
 import { skills } from "./components/data/skills";
+import { projects } from "./components/data/projects";
+
+import minkuImage from "./images/minku.webp";
+
 import {
   Code,
   Location,
@@ -11,7 +20,6 @@ import {
   Linkedin,
   Email,
 } from "./components/Svg";
-import Header from "./components/Header";
 
 export default function App() {
   const SocialsLink = ({ site, children }: SocialsLinkProps) => {
@@ -86,7 +94,21 @@ export default function App() {
           </div>
         </section>
         <section aria-label="Projects list">
-          <h2>FEATURE PROJECTS</h2>
+          <div className="project-header">
+            <h2>FEATURED PROJECTS</h2>
+            <Link to={"/projects"} className="project-link">
+              SEE MORE &rarr;
+            </Link>
+          </div>
+          <div className="projects">
+            {projects.map((project, index) => {
+              return (
+                <ProjectContainer {...project} key={index}>
+                  <img src={minkuImage} alt="" />
+                </ProjectContainer>
+              );
+            })}
+          </div>
         </section>
       </main>
     </>
