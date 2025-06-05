@@ -20,7 +20,6 @@ body {
 
 main {
   display: flex;
-  align-items: center;
   flex-direction: column;
   pointer-events: none;
   width: fit-content;
@@ -48,6 +47,11 @@ h1 {
 
 h2 {
   font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.5rem;
 }
 
 .highlight-text {
@@ -154,6 +158,32 @@ h2 {
   justify-content: center;
 }
 
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.projects {
+  margin-top: 20px;
+}
+
+.project-container {
+  display: flex;
+  background-color: var(--overlay);
+  gap: 10px;
+  padding: 10px 20px;
+}
+
+.project-image {
+  width: 250px;
+}
+
+.project-image img {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
 @media (width < 481px) {
   h1 {
     font-size: 2rem;
@@ -186,5 +216,9 @@ h2 {
 
   .skill-box {
     padding: 10px 3px;
+  }
+
+  a {
+    font-size: 1rem;
   }
 }
