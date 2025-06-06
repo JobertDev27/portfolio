@@ -1,10 +1,7 @@
-import { Link } from "react-router";
-
 import type { SocialsLinkProps } from "./components/type";
 
 import Bg from "./components/Bg";
 import SkillBox from "./components/SkillBox";
-import Header from "./components/Header";
 import ProjectContainer from "./components/ProjectContainer";
 
 import { skills } from "./components/data/skills";
@@ -40,7 +37,6 @@ export default function App() {
 
   return (
     <>
-      <Header />
       <Bg />
       <main>
         <section aria-label="Personnal info" className="personnal-info">
@@ -96,9 +92,7 @@ export default function App() {
         <section aria-label="Projects list">
           <div className="project-header">
             <h2>FEATURED PROJECTS</h2>
-            <Link to={"/projects"} className="project-link">
-              SEE MORE &rarr;
-            </Link>
+            <h2>SEE MORE &rarr;</h2>
           </div>
           <div className="projects">
             {projects.map((project, index) => {
