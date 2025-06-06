@@ -24,3 +24,20 @@ export type ProjectProps = {
   live: string;
   code : string 
 }
+
+export type ExperienceProps = {
+  works : Work[];
+  educations : Educ[];
+}
+
+type Work = {
+  company : string;
+  position : string;
+  workTimeline : string;
+}
+
+type Educ = {
+  school: string;
+  diploma: string;
+  schoolTimeline: string;
+}
