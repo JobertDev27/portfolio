@@ -17,8 +17,11 @@ import {
   Linkedin,
   Email,
 } from "./components/Svg";
+import { useRef } from "react";
 
 export default function App() {
+  const mainRef = useRef<HTMLElement>(null);
+
   const SocialsLink = ({ site, children }: SocialsLinkProps) => {
     const handleClick = () => {
       if (site.startsWith("mailto:")) {
@@ -35,10 +38,18 @@ export default function App() {
     );
   };
 
+  const handlePageTransition = () => {
+    mainRef.current!.style.transform = "translateX(-2000px)";
+    mainRef.current!.style.transition = "transform 300ms ease-in";
+    setTimeout(() => {
+      mainRef.current!.style.display = "none";
+    }, 300);
+  };
+
   return (
     <>
       <Bg />
-      <main>
+      <main ref={mainRef}>
         <section aria-label="Personnal info" className="personnal-info">
           <h1>JOBERT POYLAN JR</h1>
           <section className="info-cont">
@@ -92,7 +103,7 @@ export default function App() {
         <section aria-label="Projects list">
           <div className="project-header">
             <h2>FEATURED PROJECTS</h2>
-            <h2>SEE MORE &rarr;</h2>
+            <h2 onClick={handlePageTransition}>SEE MORE &rarr;</h2>
           </div>
           <div className="projects">
             {projects.map((project, index) => {
