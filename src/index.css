@@ -198,6 +198,7 @@ button {
 
 .project-image {
   width: 200px;
+  transition: transform 200ms ease-in;
 }
 
 .project-image img {
@@ -205,11 +206,18 @@ button {
   aspect-ratio: 16/9;
 }
 
+.project-image:hover {
+  transform: scale(1.1);
+  transition: transform 200ms ease-in;
+  cursor: pointer;
+}
+
 .stack-container {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin: 5px 0;
+  max-width: 250px;
 }
 
 .project-title {
