@@ -13,7 +13,7 @@
 }
 
 body {
-  background-color: var(--bg);
+  background-color: var(--grid);
   display: flex;
   justify-content: center;
 }
@@ -21,18 +21,12 @@ body {
 main {
   display: flex;
   flex-direction: column;
-  pointer-events: none;
   width: fit-content;
   margin-top: 30px;
   border-radius: 20px;
   min-width: 300px;
   max-width: 620px;
   padding: 10px 20px;
-}
-
-button,
-a {
-  pointer-events: auto;
 }
 
 section {
@@ -54,6 +48,10 @@ a {
   font-size: 1.5rem;
 }
 
+button {
+  cursor: pointer;
+}
+
 .highlight-text {
   color: var(--accent);
 }
@@ -70,6 +68,7 @@ a {
   z-index: -1;
   top: 0;
   left: 0;
+
   filter: blur(100px);
 }
 
@@ -77,6 +76,7 @@ a {
   width: 100px;
   height: 100px;
   background-color: var(--grid);
+  pointer-events: none;
   transition: background-color 1000ms ease-out;
 }
 
@@ -137,6 +137,12 @@ a {
 .social-btn {
   background-color: transparent;
   border: none;
+  transition: transform 200ms ease-in;
+}
+
+.social-btn:hover {
+  transform: scale(1.2);
+  transition: transform 200ms ease-in;
 }
 
 .skills-container {
@@ -156,6 +162,19 @@ a {
   border-radius: 10px;
   align-items: center;
   justify-content: center;
+  border: 2px solid var(--grid);
+  transition: transform 200ms ease-in;
+}
+
+.skill-box:hover {
+  transform: scale(1.2);
+  background-color: var(--accent);
+  transition: transform 200ms ease-in, background-color 100ms ease-in;
+}
+
+.skill-box:hover p {
+  color: var(--bg);
+  transition: color 200ms ease-in;
 }
 
 .project-header {
@@ -172,16 +191,55 @@ a {
   display: flex;
   background-color: var(--overlay);
   gap: 10px;
-  padding: 10px 20px;
+  padding: 20px 30px;
+  position: relative;
+  box-sizing: border-box;
 }
 
 .project-image {
-  width: 250px;
+  width: 200px;
 }
 
 .project-image img {
   width: 100%;
   aspect-ratio: 16/9;
+}
+
+.stack-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 5px 0;
+}
+
+.project-title {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+}
+
+.project-desc {
+  text-wrap: wrap;
+  max-width: 300px;
+}
+
+.stack-skill {
+  background-color: var(--grid);
+  padding: 3px;
+}
+
+.project-links {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.proj-btn {
+  background-color: var(--bg);
+  padding: 5px;
+  border: 0;
+  font-size: 1.2rem;
 }
 
 @media (width < 481px) {
@@ -220,5 +278,10 @@ a {
 
   a {
     font-size: 1rem;
+  }
+
+  .project-links {
+    top: 5px;
+    bottom: inherit;
   }
 }
