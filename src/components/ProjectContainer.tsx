@@ -11,7 +11,12 @@ function StackContainer({ skill }: StackContainerProps) {
 export default function ProjectContainer(props: ProjectProps) {
   return (
     <div className="project-container">
-      <div className="project-image">{props.children}</div>
+      <div
+        className="project-image"
+        onClick={() => window.open(props.live, "_blank", "noopener,noreferrer")}
+      >
+        {props.children}
+      </div>
       <div className="project-info">
         <h3 className="project-title">{props.name}</h3>
         <p className="project-desc">{props.desc}</p>
