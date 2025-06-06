@@ -18,6 +18,8 @@ import {
   Email,
 } from "./components/Svg";
 import { useRef } from "react";
+import ExperienceContainer from "./components/ExperienceContainer";
+import { experience } from "./components/data/experience";
 
 export default function App() {
   const mainRef = useRef<HTMLElement>(null);
@@ -115,7 +117,19 @@ export default function App() {
             })}
           </div>
         </section>
+        <section aria-label="Experience">
+          <h2>EXPERIENCE</h2>
+          <ExperienceContainer {...experience} />
+        </section>
+        <section aria-label="Contacts">
+          <h2>LET'S TALK</h2>
+          <div className="contact-container">
+            <h2>Email: jobertdev27@gmail.com</h2>
+            <h2>Phone +(63) 963 729 4502</h2>
+          </div>
+        </section>
       </main>
+      <footer>&copy; 2025 JobertDev27 All Rights Reserved</footer>
     </>
   );
 }
