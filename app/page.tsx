@@ -1,13 +1,21 @@
+import Landing from "./tabs/Landing";
+
 export default function Home() {
   return (
-    <header>
-      <nav>
-        <ul className="flex-col">
-          <li>About</li>
-          <li>Projects</li>
-          <li>Contact</li>
-        </ul>
-      </nav>
-    </header>
+    <>
+      <header className="">
+        <nav>
+          <ul className="flex flex-row items-center justify-center gap-20 m-5 text-xl">
+            <li>About</li>
+            <li>Projects</li>
+            <li>Contact</li>
+            <li>Download CV</li>
+          </ul>
+        </nav>
+      </header>
+      <main className="flex justify-center mt-15">
+        <Landing />
+      </main>
+    </>
   );
 }

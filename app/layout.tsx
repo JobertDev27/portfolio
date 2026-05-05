@@ -7,9 +7,9 @@ export const metadata: Metadata = {
   description: "Portfolio of JobertDev",
 };
 
-const iosevka = localFont({
-  src: "./fonts/Iosevka.ttf",
-  variable: "--font-iosevka",
+const jetbrains = localFont({
+  src: "./fonts/Jetbrains-mono.ttf",
+  variable: "--jetbrains-mono",
   display: "swap",
 });
 
@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={iosevka.className}>
+    <html lang="en" className={jetbrains.className}>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
