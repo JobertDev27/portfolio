@@ -5,7 +5,7 @@ export default function Home() {
     <>
       <header className="">
         <nav>
-          <ul className="flex flex-row items-center justify-center gap-20 m-5 text-xl">
+          <ul className="flex flex-row items-center justify-center gap-20 m-5">
             <li>About</li>
             <li>Projects</li>
             <li>Contact</li>
