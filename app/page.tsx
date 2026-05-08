@@ -5,7 +5,7 @@ export default function Home() {
     <>
       <header className="">
         <nav>
-          <ul className="flex flex-row items-center justify-center gap-20 m-5">
+          <ul className="flex flex-row items-center justify-center gap-4 md:gap-20 m-5">
             <li>About</li>
             <li>Projects</li>
             <li>Contact</li>
@@ -13,7 +13,7 @@ export default function Home() {
           </ul>
         </nav>
       </header>
-      <main className="flex justify-center mt-15">
+      <main className="flex justify-center mt-5 md:mt-15">
         <Landing />
       </main>
     </>
