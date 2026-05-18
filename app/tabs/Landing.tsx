@@ -22,28 +22,47 @@ export default function Landing() {
           <h1 className="font-bold text-(--highlight)">Jobert Poylan Jr</h1>
           <h2>Full-Stack Developer</h2>
           <Clock />
-          <nav className="flex gap-4 mt-5">
-            <Image
-              className="w-[1.5rem]"
-              width={24}
-              height={24}
-              src={"/github.png"}
-              alt="github"
-            />
-            <Image
-              className="w-[1.5rem]"
-              width={24}
-              height={24}
-              src={"/linkedin.png"}
-              alt="linkedin"
-            />
-            <Image
-              className="w-[1.5rem]"
-              width={24}
-              height={24}
-              src={"/gmail.png"}
-              alt="gmail"
-            />
+          <nav className="flex gap-4 mt-5 items-center">
+            <a href="https://github.com/JobertDev27">
+              <Image
+                className="w-[2rem] cursor-pointer"
+                width={24}
+                height={24}
+                src={"/github.png"}
+                alt="github"
+              />
+            </a>
+            <a href="https://www.linkedin.com/in/jobert-poylan-jr/">
+              <Image
+                className="w-[2rem] cursor-pointer"
+                width={24}
+                height={24}
+                src={"/linkedin.png"}
+                alt="linkedin"
+              />
+            </a>
+            <a href="mailto:jobertdev27@gmail.com">
+              <Image
+                className="w-[2rem] cursor-pointer"
+                width={24}
+                height={24}
+                src={"/gmail.png"}
+                alt="gmail"
+              />
+            </a>
+            <a
+              href="/Resume.pdf"
+              className="border py-2 px-4 flex gap-2 items-center justify-around rounded-lg"
+            >
+              <Image
+                className="w-[1rem] h-[1rem]"
+                width={24}
+                height={24}
+                src={"/resume.png"}
+                alt="img"
+              />
+              <p>Resume</p>
+            </a>
           </nav>
         </div>
       </section>
