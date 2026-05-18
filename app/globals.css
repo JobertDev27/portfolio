@@ -19,3 +19,16 @@ body {
   color: var(--foreground);
   font-family: var(--jetbrains-mono), monospace;
 }
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
