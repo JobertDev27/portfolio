@@ -1,5 +1,6 @@
 import Clock from "../../components/Clock";
 import SkillBox from "@/components/SkillBox";
+import Image from "next/image";
 
 export default function Landing() {
   const skills = [
@@ -16,10 +17,34 @@ export default function Landing() {
 
   return (
     <main>
-      <section className="md:p-0 md:w-[90%] lg:w-[50%] flex flex-row md:gap-10 items-center mb-5">
+      <section className="md:p-0 md:w-[90%] lg:w-[50%] flex flex-row md:gap-10 items-center mb-8">
         <div className="flex-1">
           <h1 className="font-bold text-(--highlight)">Jobert Poylan Jr</h1>
           <h2>Full-Stack Developer</h2>
+          <Clock />
+          <nav className="flex gap-4 mt-5">
+            <Image
+              className="w-[1.5rem]"
+              width={24}
+              height={24}
+              src={"/github.png"}
+              alt="github"
+            />
+            <Image
+              className="w-[1.5rem]"
+              width={24}
+              height={24}
+              src={"/linkedin.png"}
+              alt="linkedin"
+            />
+            <Image
+              className="w-[1.5rem]"
+              width={24}
+              height={24}
+              src={"/gmail.png"}
+              alt="gmail"
+            />
+          </nav>
         </div>
       </section>
       <section>

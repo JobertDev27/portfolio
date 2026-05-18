@@ -41,21 +41,6 @@ export default function Clock() {
   }
 
   return (
-    <div className="flex items-center justify-center flex-col gap-5 p-2 lg:p-6 border border-(--highlight) w-fit">
-      <p className="text-sm">Philippines</p>
-      <Image
-        src={"/earth.png"}
-        alt="earth"
-        width={64}
-        height={64}
-        className="w-6 h-6 md:w-16 md:h-16"
-      />
-      <div className="flex items-center flex-col">
-        <p className="text-base md:text-2xl font-bold">
-          {time ? formatTime(time) : "Loading..."}
-        </p>
-        <p className="text-sm md:text-lg">{day} UTC+08:00</p>
-      </div>
-    </div>
+    <p className="text-sm">🇵🇭 Philippines GMT+8 | {time && formatTime(time)}</p>
   );
 }
