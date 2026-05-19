@@ -74,6 +74,18 @@ export default function Landing() {
           ))}
         </div>
       </section>
+      <section className="md:p-0 md:w-[90%] lg:w-[50%] flex flex-col md:gap-10 mb-8 mt-5">
+        <h3>EXPERIENCE:</h3>
+        <div className="flex justify-between">
+          <div>
+            <h4>Office Assistant</h4>
+            <p className="text-sm">Iloilo City Government</p>
+          </div>
+          <div className="flex justify-end">
+            <p>May 2024 - June 2024</p>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
