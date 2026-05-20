@@ -13,7 +13,7 @@ export default function Home() {
           </ul>
         </nav>
       </header>
-      <main className="flex justify-center mt-5 mx-4 md:mt-15">
+      <main className="flex justify-center mt-5 mx-4 md:mt-15 ">
         <Landing />
       </main>
     </>

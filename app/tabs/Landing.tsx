@@ -17,7 +17,7 @@ export default function Landing() {
 
   return (
     <main>
-      <section className="md:p-0 md:w-[90%] lg:w-[50%] flex flex-row md:gap-10 items-center mb-8">
+      <section className=" w-full flex flex-row md:gap-10 items-center mb-8">
         <div className="flex-1">
           <h1 className="font-bold text-(--highlight)">Jobert Poylan Jr</h1>
           <h2>Full-Stack Developer</h2>
@@ -74,17 +74,19 @@ export default function Landing() {
           ))}
         </div>
       </section>
-      <section className="md:p-0 md:w-[90%] lg:w-[50%] flex flex-col md:gap-10 mb-8 mt-5">
-        <h3>EXPERIENCE:</h3>
-        <div className="flex justify-between">
+      <section className="md:p-0 w-full flex flex-col mb-6 mt-5">
+        <h3 className="mb-2">EXPERIENCE:</h3>
+        <div className="flex w-full justify-between">
           <div>
             <h4>Office Assistant</h4>
             <p className="text-sm">Iloilo City Government</p>
           </div>
-          <div className="flex justify-end">
-            <p>May 2024 - June 2024</p>
-          </div>
+          <p>May 2024 - June 2024</p>
         </div>
+      </section>
+      <section className="md:p-0 md:w-[90%] lg:w-[50%] flex flex-col md:gap-10 mb-8 mt-5">
+        <h3>PROJECTS:</h3>
+        <div className="flex flex-col"></div>
       </section>
     </main>
   );
