@@ -1,8 +1,10 @@
 import Clock from "@/components/Clock";
 import SkillBox from "@/components/SkillBox";
 import Image from "next/image";
+import ProjectBox from "@/components/ProjectBox";
 
 export default function Home() {
+  // Add skills here, images are found in public
   const skills = [
     ["/react.png", "React"],
     ["/typescript.png", "TypeScript"],
@@ -15,21 +17,20 @@ export default function Home() {
     ["/linux.svg", "Linux"],
   ];
 
+  // Add projects here
+  const projects = [
+    {
+      title: "Yomutsugi",
+      thumbnail: "/yomutsugi.png",
+      stack: ["React", "Supabase", "PostgreSQL"],
+      desc: "A library to browse and search anime from a massive database then store, give your own ratings, and organize them in custom categories! ",
+    },
+  ];
+
   return (
     <>
-      <header className="">
-        <nav>
-          <ul className="flex flex-row items-center md:justify-center gap-4 md:gap-20 mx-4 my-5">
-            <li>About</li>
-            <li>Projects</li>
-            <li>Contact</li>
-            <li>Resume</li>
-          </ul>
-        </nav>
-      </header>
-
       <main className="flex justify-center mt-5 mx-4 md:mt-15 ">
-        <div>
+        <div className="max-w-4xl">
           <section className=" w-full flex flex-col md:flex-row gap-5 md:items-center mb-8">
             <div className="flex-1">
               <h1 className="font-bold text-(--highlight)">Jobert Poylan Jr</h1>
@@ -40,7 +41,7 @@ export default function Home() {
               <nav className="flex gap-4 items-center">
                 <a href="https://github.com/JobertDev27">
                   <Image
-                    className="w-[2rem] cursor-pointer"
+                    className="w-[1.5rem] cursor-pointer"
                     width={24}
                     height={24}
                     src={"/github.png"}
@@ -49,7 +50,7 @@ export default function Home() {
                 </a>
                 <a href="https://www.linkedin.com/in/jobert-poylan-jr/">
                   <Image
-                    className="w-[2rem] cursor-pointer"
+                    className="w-[1.5rem] cursor-pointer"
                     width={24}
                     height={24}
                     src={"/linkedin.png"}
@@ -58,7 +59,7 @@ export default function Home() {
                 </a>
                 <a href="mailto:jobertdev27@gmail.com">
                   <Image
-                    className="w-[2rem] cursor-pointer"
+                    className="w-[1.5rem] cursor-pointer"
                     width={24}
                     height={24}
                     src={"/gmail.png"}
@@ -67,7 +68,7 @@ export default function Home() {
                 </a>
                 <a
                   href="/Resume.pdf"
-                  className="border py-2 px-4 flex gap-2 items-center justify-around rounded-lg"
+                  className="border py-1.5 px-4 flex gap-2 items-center justify-around rounded-lg"
                 >
                   <Image
                     className="w-[1rem] h-[1rem]"
@@ -99,9 +100,13 @@ export default function Home() {
               <p>May 2024 - June 2024</p>
             </div>
           </section>
-          <section className="md:p-0 md:w-[90%] lg:w-[50%] flex flex-col md:gap-10 mb-8 mt-5">
+          <section className="md:p-0 flex flex-col md:gap-10 mb-8 mt-5">
             <h3>PROJECTS:</h3>
-            <div className="flex flex-col"></div>
+            <div className="flex flex-row flex-wrap">
+              <ProjectBox {...projects[0]} />
+              <ProjectBox {...projects[0]} />
+              <ProjectBox {...projects[0]} />
+            </div>
           </section>
         </div>
       </main>
