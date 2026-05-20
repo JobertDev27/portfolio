@@ -7,7 +7,7 @@ type SkillProp = {
 
 export default function SkillBox(skillProp: SkillProp) {
   return (
-    <div className="flex gap-2 items-center justify-center w-fit h-[30px] cursor-default">
+    <div className="flex gap-2 items-center justify-center w-fit cursor-default">
       <Image
         src={skillProp.icon}
         width={24}

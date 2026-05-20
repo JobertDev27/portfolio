@@ -1,7 +1,5 @@
 "use client";
-
 import { useEffect, useState } from "react";
-import Image from "next/image";
 
 export default function Clock() {
   const [time, setTime] = useState<Date | null>(null);
