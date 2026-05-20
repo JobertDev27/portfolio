@@ -17,12 +17,14 @@ export default function Landing() {
 
   return (
     <main>
-      <section className=" w-full flex flex-row md:gap-10 items-center mb-8">
+      <section className=" w-full flex flex-col md:flex-row gap-5 md:items-center mb-8">
         <div className="flex-1">
           <h1 className="font-bold text-(--highlight)">Jobert Poylan Jr</h1>
           <h2>Full-Stack Developer</h2>
           <Clock />
-          <nav className="flex gap-4 mt-5 items-center">
+        </div>
+        <div className=" self-start">
+          <nav className="flex gap-4 items-center">
             <a href="https://github.com/JobertDev27">
               <Image
                 className="w-[2rem] cursor-pointer"
