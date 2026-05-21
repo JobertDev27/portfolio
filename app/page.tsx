@@ -20,10 +20,26 @@ export default function Home() {
   // Add projects here
   const projects = [
     {
+      title: "NextUP",
+      thumbnail: "/nextup.png",
+      stack: [
+        "React Native",
+        "Expo",
+        "TypeScript",
+        "Express",
+        "Socket.io",
+        "Arduino",
+      ],
+      desc: "Queue Management System",
+      code: "https://github.com/JobertDev27/next-up",
+    },
+    {
       title: "Yomutsugi",
       thumbnail: "/yomutsugi.png",
       stack: ["React", "Supabase", "PostgreSQL"],
       desc: "Anime library App",
+      code: "https://github.com/JobertDev27/yomutsugi",
+      live: "https://yomutsugi.netlify.app/",
     },
   ];
 
@@ -117,9 +133,9 @@ export default function Home() {
           <section className="md:p-0 flex flex-col md:gap-2 mb-8 mt-5">
             <h3>PROJECTS:</h3>
             <div className="flex flex-row flex-wrap md:grid md:grid-cols-2 gap-3">
-              <ProjectBox {...projects[0]} />
-              <ProjectBox {...projects[0]} />
-              <ProjectBox {...projects[0]} />
+              {projects.map((proj, i) => {
+                return <ProjectBox key={i} {...proj} />;
+              })}
             </div>
           </section>
         </div>
