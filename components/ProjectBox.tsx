@@ -9,7 +9,7 @@ type ProjectProps = {
 
 export default function ProjectBox(prop: ProjectProps) {
   return (
-    <div className="w-full flex flex-col border-(--foreground) p-4">
+    <div className="w-full flex flex-col border border-(--border) p-4 rounded-md">
       <div>
         <Image
           className="w-full h-auto"
@@ -27,7 +27,7 @@ export default function ProjectBox(prop: ProjectProps) {
             return (
               <div
                 key={i}
-                className="py-1 px-1.5 rounded-full bg-(--foreground) text-(--background) text-sm"
+                className=" px-1 rounded-sm bg-(--foreground) text-(--background) text-sm"
               >
                 <p>{skill}</p>
               </div>

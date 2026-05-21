@@ -23,15 +23,15 @@ export default function Home() {
       title: "Yomutsugi",
       thumbnail: "/yomutsugi.png",
       stack: ["React", "Supabase", "PostgreSQL"],
-      desc: "A library to browse and search anime from a massive database then store, give your own ratings, and organize them in custom categories! ",
+      desc: "Anime library App",
     },
   ];
 
   return (
     <>
-      <main className="flex justify-center mt-5 mx-4 md:mt-15 ">
+      <main className="flex justify-center mx-4 my-10">
         <div className="max-w-4xl">
-          <section className=" w-full flex flex-col md:flex-row gap-5 md:items-center mb-8">
+          <section className=" w-full flex flex-col md:flex-row gap-5 md:items-center mb-10">
             <div className="flex-1">
               <h1 className="font-bold text-(--highlight)">Jobert Poylan Jr</h1>
               <h2>Full-Stack Developer</h2>
@@ -90,19 +90,33 @@ export default function Home() {
               ))}
             </div>
           </section>
-          <section className="md:p-0 w-full flex flex-col mb-6 mt-5">
+          <section className="md:p-0 w-full flex flex-col my-10 ">
             <h3 className="mb-2">EXPERIENCE:</h3>
-            <div className="flex w-full justify-between">
+            <div className="flex flex-col md:flex-row w-full justify-between border border-(--border) p-4 rounded-md">
               <div>
-                <h4>Office Assistant</h4>
+                <h4 className="font-bold text-(--highlight)">
+                  Office Assistant
+                </h4>
                 <p className="text-sm">Iloilo City Government</p>
               </div>
               <p>May 2024 - June 2024</p>
             </div>
           </section>
-          <section className="md:p-0 flex flex-col md:gap-10 mb-8 mt-5">
+          <section className="md:p-0 w-full flex flex-col my-10 ">
+            <h3 className="mb-2">EDUCATION:</h3>
+            <div className="flex flex-col md:flex-row w-full justify-between border border-(--border) p-4 rounded-md">
+              <div>
+                <h4 className="font-bold text-(--highlight)">
+                  Phinma University of Iloilo
+                </h4>
+                <p className="text-sm">B.S in Information Technology</p>
+              </div>
+              <p>Expected 2028</p>
+            </div>
+          </section>
+          <section className="md:p-0 flex flex-col md:gap-2 mb-8 mt-5">
             <h3>PROJECTS:</h3>
-            <div className="flex flex-row flex-wrap">
+            <div className="flex flex-row flex-wrap md:grid md:grid-cols-2 gap-3">
               <ProjectBox {...projects[0]} />
               <ProjectBox {...projects[0]} />
               <ProjectBox {...projects[0]} />
