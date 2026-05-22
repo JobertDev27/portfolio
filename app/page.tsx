@@ -144,6 +144,9 @@ export default function Home() {
               })}
             </div>
           </section>
+          <section className="mt-20 flex gap-2 items-center text-zinc-300">
+            <p>JobertDev27 © {new Date().getFullYear()}</p>
+          </section>
         </div>
       </main>
     </>

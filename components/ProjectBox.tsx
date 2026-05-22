@@ -27,14 +27,14 @@ export default function ProjectBox(prop: ProjectProps) {
           <div className="flex gap-2">
             {prop.live && (
               <a
-                className="bg-neutral-200 text-neutral-950 px-1 rounded-sm"
+                className="bg-neutral-200 text-neutral-950 px-1 rounded-sm text-sm"
                 href={prop.live}
               >
                 live
               </a>
             )}{" "}
             <a
-              className="bg-neutral-200 text-neutral-950 px-1 rounded-sm"
+              className="bg-neutral-200 text-neutral-950 px-1 rounded-sm text-sm"
               href={prop.code}
             >
               source
