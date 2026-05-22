@@ -20,6 +20,14 @@ export default function Home() {
   // Add projects here
   const projects = [
     {
+      title: "Ryder Tracker",
+      thumbnail: "/nextup.png",
+      stack: ["React", "Next", "TypeScript", "Tailwind CSS", "PWA", "Serwist"],
+      desc: "Delivery Goal and Budget Tracker",
+      code: "https://github.com/JobertDev27/ryder-tracker",
+      live: "https://ryder-tracker.vercel.app/",
+    },
+    {
       title: "NextUP",
       thumbnail: "/nextup.png",
       stack: [
@@ -36,7 +44,7 @@ export default function Home() {
     {
       title: "Yomutsugi",
       thumbnail: "/yomutsugi.png",
-      stack: ["React", "Supabase", "PostgreSQL"],
+      stack: ["React", "TypeScript", "Supabase", "PostgreSQL"],
       desc: "Anime library App",
       code: "https://github.com/JobertDev27/yomutsugi",
       live: "https://yomutsugi.netlify.app/",

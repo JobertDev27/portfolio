@@ -27,7 +27,7 @@ export default function ProjectBox(prop: ProjectProps) {
           <div className="text-(--accent-hover) flex gap-2">
             {prop.live && (
               <a className="border-r pr-2" href={prop.live}>
-                Live
+                live
               </a>
             )}{" "}
             <a href={prop.code}>github</a>
