@@ -1,18 +1,36 @@
 @import "tailwindcss";
 
 :root {
-  --background: #1a1b26;
-  --foreground: #c0caf5;
-  --highlight: #bb9af7;
-  --muted: #9aa5ce;
-  --border: #2a2e3f;
-  --accent-hover: #a78bfa;
+  --background: #141414;
+  --foreground: #f4f4f6;
+  --muted: #c8c8c8;
+  --border: #6d6d74;
 }
 
 body {
-  background: var(--background);
+  /* background: var(--background); */
+  margin: 0;
+  padding: 0;
   color: var(--foreground);
   font-family: var(--jetbrains-mono), monospace;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #1c1c1c 0,
+      #1c1c1c 5%,
+      transparent 0,
+      transparent 50%
+    ),
+    repeating-linear-gradient(
+      180deg,
+      #1c1c1c 0,
+      #1c1c1c 5%,
+      transparent 0,
+      transparent 50%
+    );
+  background-size: 4em 4em;
+  background-color: #141414;
+  opacity: 1;
 }
 
 h1 {
