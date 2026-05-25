@@ -20,9 +20,17 @@ export default function Home() {
   // Add projects here
   const projects = [
     {
-      title: "Ryder Tracker",
-      thumbnail: "/nextup.png",
-      stack: ["React", "Next", "TypeScript", "Tailwind CSS", "PWA", "Serwist"],
+      title: "Ryder Tracker (WIP)",
+      thumbnail: "/ryder-tracker.png",
+      stack: [
+        "React",
+        "Next",
+        "TypeScript",
+        "Tailwind CSS",
+        "PWA",
+        "Serwist",
+        "DexieDB",
+      ],
       desc: "Delivery Goal and Budget Tracker",
       code: "https://github.com/JobertDev27/ryder-tracker",
       live: "https://ryder-tracker.vercel.app/",
