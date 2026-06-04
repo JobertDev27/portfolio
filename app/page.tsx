@@ -129,7 +129,7 @@ export default function Home() {
                 <h4 className="font-bold text-white">Office Assistant</h4>
                 <p className="text-sm">Iloilo City Government</p>
               </div>
-              <p>May 2024 - June 2024</p>
+              <p className="text-sm">May 2024 - June 2024</p>
             </div>
           </section>
           <section className="md:p-0 w-full flex flex-col my-10 ">
@@ -141,7 +141,7 @@ export default function Home() {
                 </h4>
                 <p className="text-sm">B.S in Information Technology</p>
               </div>
-              <p>Expected 2028</p>
+              <p className="text-sm">Expected 2028</p>
             </div>
           </section>
           <section className="md:p-0 flex flex-col gap-3 my-10">
