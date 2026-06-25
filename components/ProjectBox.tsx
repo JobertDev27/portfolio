@@ -14,14 +14,14 @@ export default function ProjectBox(prop: ProjectProps) {
     <div className="w-full flex flex-col border border-(--border) p-4 rounded-md bg-(--background)">
       <div>
         <Image
-          className="w-full h-auto"
+          className="w-full h-auto max-h-[230px]"
           width={1080}
           height={720}
           alt="thumnail"
           src={prop.thumbnail}
         />
       </div>
-      <div className="flex flex-col gap-2 mt-2 py-2 gap-5">
+      <div className="flex flex-col mt-2 py-2 gap-2">
         <div className="flex items-center justify-between">
           <p className="text-lg font-bold">{prop.title}</p>
           <div className="flex gap-2">
